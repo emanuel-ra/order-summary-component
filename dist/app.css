@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --pale-blue: hsl(225, 100%, 94%);
+        --bright-blue: hsl(245, 75%, 52%);
+        --very-pale-blue: hsl(225, 100%, 98%);
+        --desaturated-blue: hsl(224, 23%, 55%);
+        --dark-blue: hsl(223, 47%, 23%);
+    }
+    html{
+        @apply bg-pale-blue bg-mobile md:bg-desktop bg-contain bg-no-repeat font-red-hat;
+    }
+    h1{ 
+        @apply text-2xl font-bold;
+    }
+    h2{
+        @apply text-lg font-semibold;
+    }
+}
+
+@layer components{
+    .main{
+        @apply w-screen h-screen;
+    }
+    .card{
+        @apply w-[90%] md:w-[50%] max-w-[432px] bg-white m-auto rounded-lg shadow-2xl;
+    }
+    .box-plan{
+        @apply w-full bg-very-pale-blue rounded-lg mt-2 p-5 flex justify-between;
+    }
+    .btn{
+        @apply p-5 text-lg rounded-lg shadow-lg w-full;
+    }
+    .btn-primary{
+        @apply bg-bright-blue text-white hover:bg-dark-blue;
+    }
+}
